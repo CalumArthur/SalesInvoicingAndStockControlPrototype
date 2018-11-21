@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="staff.StaffController">
+   <children>
+      <TabPane fx:id="generalInformationTabPane" prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="General Infomation">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="691.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab text="Customer Details">
+                                 <content>
+                                    <AnchorPane fx:id="custDetailsAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TabPane prefHeight="661.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+                                             <tabs>
+                                                <Tab text="Add Customer">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox fx:id="test" prefHeight="620.0" prefWidth="293.0">
+                                                               <children>
+                                                                  <Label prefHeight="43.0" prefWidth="213.0" text="Add Customer">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <TextField fx:id="FirstName1" prefHeight="26.0" prefWidth="193.0" promptText="First Name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="LastName1" layoutX="50.0" layoutY="53.0" prefHeight="26.0" prefWidth="193.0" promptText="Last Name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="Address1" layoutX="50.0" layoutY="79.0" prefHeight="26.0" prefWidth="193.0" promptText="Address">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="PostCode1" layoutX="10.0" layoutY="131.0" prefHeight="26.0" prefWidth="193.0" promptText="Post Code">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="Email1" layoutX="10.0" layoutY="105.0" prefHeight="26.0" prefWidth="193.0" promptText="Email">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="ContactNo1" prefHeight="26.0" prefWidth="193.0" promptText="Contact Number">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <Button fx:id="clear1" mnemonicParsing="false" onAction="#ClearFields" prefHeight="25.0" prefWidth="213.0" text="Clear Fields">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false" onAction="#AddCustomer" prefHeight="25.0" prefWidth="213.0" text="Add Customer">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button layoutX="50.0" layoutY="183.0" mnemonicParsing="false" onAction="#LoadCustomerDataMethod" prefHeight="25.0" prefWidth="213.0" text="Load Data">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="91.0" text="Log out">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" top="299.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox layoutX="315.0" prefHeight="633.0" prefWidth="965.0">
+                                                               <children>
+                                                                  <TableView fx:id="custTable1" prefHeight="633.0" prefWidth="981.0">
+                                                                     <columns>
+                                                                        <TableColumn fx:id="idCol1" prefWidth="43.0" text="ID" />
+                                                                        <TableColumn fx:id="firstNameCol1" prefWidth="151.0" text="First Name" />
+                                                                        <TableColumn fx:id="lastNameCol1" prefWidth="150.0" text="Last Name" />
+                                                                        <TableColumn fx:id="addressCol1" prefWidth="235.0" text="Address" />
+                                                                        <TableColumn fx:id="emailCol1" prefWidth="215.0" text="Email" />
+                                                                        <TableColumn fx:id="contactNoCol1" prefWidth="203.0" text="Contact Number" />
+                                                                     </columns>
+                                                                  </TableView>
+                                                               </children>
+                                                            </HBox>
+                                                            <VBox layoutX="227.0" layoutY="43.0" prefHeight="232.0" prefWidth="126.0">
+                                                               <children>
+                                                                  <Label fx:id="fNameValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="lNameValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="addressValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="pCValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="emailValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="contactNoValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                                <Tab text="Delete Customer">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox prefHeight="620.0" prefWidth="293.0">
+                                                               <children>
+                                                                  <Label prefHeight="43.0" prefWidth="213.0" text="Delete Customer">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <TextField fx:id="DelFirstName1" prefHeight="26.0" prefWidth="193.0" promptText="First Name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="DelLastName1" layoutX="50.0" layoutY="53.0" prefHeight="26.0" prefWidth="193.0" promptText="Last Name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="DelID1" layoutX="50.0" layoutY="79.0" prefHeight="26.0" prefWidth="193.0" promptText="CustomerID">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <Button mnemonicParsing="false" onAction="#ClearFields" prefHeight="25.0" prefWidth="213.0" text="Clear Fields">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button layoutX="50.0" layoutY="183.0" mnemonicParsing="false" onAction="#DeleteCustomer" prefHeight="25.0" prefWidth="213.0" text="Delete Customer">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false" onAction="#LoadCustomerDataMethod" prefHeight="25.0" prefWidth="213.0" text="Load Data">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="91.0" text="Log out">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" top="377.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox layoutX="315.0" prefHeight="633.0" prefWidth="965.0">
+                                                               <children>
+                                                                  <TableView fx:id="custTable21" prefHeight="633.0" prefWidth="981.0">
+                                                                     <columns>
+                                                                        <TableColumn fx:id="idCol21" prefWidth="43.0" text="ID" />
+                                                                        <TableColumn fx:id="firstNameCol21" prefWidth="151.0" text="First Name" />
+                                                                        <TableColumn fx:id="lastNameCol21" prefWidth="150.0" text="Last Name" />
+                                                                        <TableColumn fx:id="addressCol21" prefWidth="235.0" text="Address" />
+                                                                        <TableColumn fx:id="emailCol21" prefWidth="215.0" text="Email" />
+                                                                        <TableColumn fx:id="contactNoCol21" prefWidth="203.0" text="Contact Number" />
+                                                                     </columns>
+                                                                  </TableView>
+                                                               </children>
+                                                            </HBox>
+                                                            <VBox layoutX="227.0" layoutY="43.0" prefHeight="232.0" prefWidth="126.0">
+                                                               <children>
+                                                                  <Label fx:id="delNameValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="delLastNameValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="delCustIdValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                                <Tab text="Update Customer">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox prefHeight="620.0" prefWidth="293.0">
+                                                               <children>
+                                                                  <Label prefHeight="43.0" prefWidth="213.0" text="Update Customer">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <TextField fx:id="updateCustFirstName" prefHeight="26.0" prefWidth="193.0" promptText="First Name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="updateCustLastName" layoutX="50.0" layoutY="53.0" prefHeight="26.0" prefWidth="193.0" promptText="Last Name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="updateCustAddress" layoutX="50.0" layoutY="79.0" prefHeight="26.0" prefWidth="193.0" promptText="Address">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="updateCustPostCode" prefHeight="26.0" prefWidth="193.0" promptText="Post Code">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="updateCustEmail" layoutX="10.0" layoutY="105.0" prefHeight="26.0" prefWidth="193.0" promptText="Email">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="updateCustContactNo" layoutX="10.0" layoutY="131.0" prefHeight="26.0" prefWidth="193.0" promptText="Contact Number">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="updateCustId" editable="false" prefHeight="26.0" prefWidth="193.0" promptText="ID">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <Button mnemonicParsing="false" onAction="#ClearFields" prefHeight="25.0" prefWidth="213.0" text="Clear Fields">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false" onAction="#UpdateCustomer" prefHeight="25.0" prefWidth="213.0" text="Update Customer">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button layoutX="50.0" layoutY="183.0" mnemonicParsing="false" onAction="#LoadCustomerDataMethod" prefHeight="25.0" prefWidth="213.0" text="Load Data">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="91.0" text="Log out">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" top="273.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox layoutX="315.0" prefHeight="633.0" prefWidth="965.0">
+                                                               <children>
+                                                                  <TableView fx:id="custTable31" prefHeight="633.0" prefWidth="981.0">
+                                                                     <columns>
+                                                                        <TableColumn fx:id="idCol31" prefWidth="43.0" text="ID" />
+                                                                        <TableColumn fx:id="firstNameCol31" prefWidth="151.0" text="First Name" />
+                                                                        <TableColumn fx:id="lastNameCol31" prefWidth="150.0" text="Last Name" />
+                                                                        <TableColumn fx:id="addressCol31" prefWidth="235.0" text="Address" />
+                                                                        <TableColumn fx:id="emailCol31" prefWidth="215.0" text="Email" />
+                                                                        <TableColumn fx:id="contactNoCol31" prefWidth="203.0" text="Contact Number" />
+                                                                     </columns>
+                                                                  </TableView>
+                                                               </children>
+                                                            </HBox>
+                                                            <VBox layoutX="237.0" layoutY="43.0" prefHeight="242.0" prefWidth="126.0">
+                                                               <children>
+                                                                  <Label fx:id="fNameValid1" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="lNameValid1" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="addressValid1" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="pCValid1" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="emailValid1" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="contactNoValid1" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                             </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Product Details">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TabPane prefHeight="661.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+                                             <tabs>
+                                                <Tab text="Memory">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox prefHeight="620.0" prefWidth="293.0">
+                                                               <children>
+                                                                  <Label prefHeight="43.0" prefWidth="213.0" text="Filters">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <TextField layoutX="50.0" layoutY="53.0" prefHeight="26.0" prefWidth="193.0" promptText="More than amount">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField layoutX="50.0" layoutY="79.0" prefHeight="26.0" prefWidth="193.0" promptText="Less than amount">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField layoutX="10.0" layoutY="105.0" prefHeight="26.0" prefWidth="193.0" promptText="Search by name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField layoutX="10.0" layoutY="131.0" prefHeight="26.0" prefWidth="193.0" promptText="Search by ID">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="213.0" text="Search">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button layoutX="50.0" layoutY="183.0" mnemonicParsing="false" onAction="#LoadStockProductData" prefHeight="25.0" prefWidth="213.0" text="Load Data">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button layoutX="50.0" layoutY="208.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="91.0" text="Log out">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" top="376.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox layoutX="315.0" prefHeight="633.0" prefWidth="961.0">
+                                                               <children>
+                                                                  <TableView fx:id="memoryTable1" prefHeight="633.0" prefWidth="962.0">
+                                                                     <columns>
+                                                                        <TableColumn fx:id="memoryIdCol1" prefWidth="43.0" text="ID" />
+                                                                        <TableColumn fx:id="memoryNameCol1" prefWidth="181.0" text="Product Name" />
+                                                                        <TableColumn fx:id="memoryDescripCol1" prefWidth="329.0" text="Description" />
+                                                                        <TableColumn fx:id="memoryStockCol1" prefWidth="110.0" text="Stock amount" />
+                                                                        <TableColumn fx:id="memoryPriceCol1" minWidth="0.0" prefWidth="112.0" text="Price" />
+                                                                     </columns>
+                                                                  </TableView>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                                <Tab text="Product1">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox prefHeight="620.0" prefWidth="293.0">
+                                                               <children>
+                                                                  <Label prefHeight="43.0" prefWidth="213.0" text="Filters">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <TextField layoutX="50.0" layoutY="53.0" prefHeight="26.0" prefWidth="193.0" promptText="More than amount">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField layoutX="50.0" layoutY="79.0" prefHeight="26.0" prefWidth="193.0" promptText="Less than amount">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField layoutX="10.0" layoutY="105.0" prefHeight="26.0" prefWidth="193.0" promptText="Search by name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField layoutX="10.0" layoutY="131.0" prefHeight="26.0" prefWidth="193.0" promptText="Search by ID">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="213.0" text="Search">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button layoutX="50.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="213.0" text="Load Data">
+                                                                     <VBox.margin>
+                                                                        <Insets left="40.0" right="40.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button layoutX="50.0" layoutY="208.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="91.0" text="Log out">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" top="376.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox layoutX="315.0" prefHeight="633.0" prefWidth="961.0">
+                                                               <children>
+                                                                  <TableView prefHeight="633.0" prefWidth="962.0">
+                                                                     <columns>
+                                                                        <TableColumn prefWidth="61.0" text="ID" />
+                                                                        <TableColumn prefWidth="181.0" text="Product Name" />
+                                                                        <TableColumn prefWidth="329.0" text="Description" />
+                                                                        <TableColumn prefWidth="110.0" text="Stock amount" />
+                                                                        <TableColumn minWidth="0.0" prefWidth="112.0" text="Price" />
+                                                                     </columns>
+                                                                  </TableView>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                             </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Supplier Details">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TabPane fx:id="invoiceInformationTabPane1" prefHeight="663.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+                                             <tabs>
+                                                <Tab text="Suppliers">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="314.0" layoutY="-1.0" prefHeight="635.0" prefWidth="966.0">
+                                                               <children>
+                                                                  <TableView fx:id="supplierTable" prefHeight="635.0" prefWidth="970.0">
+                                                                     <columns>
+                                                                        <TableColumn fx:id="supIdCol" prefWidth="53.0" text="ID" />
+                                                                        <TableColumn fx:id="supCompanyNameCol" prefWidth="220.0" text="Company Name" />
+                                                                        <TableColumn fx:id="supFirstNameCol" minWidth="0.0" prefWidth="212.0" text="First Name" />
+                                                                        <TableColumn fx:id="supLastNameCol" minWidth="0.0" prefWidth="240.0" text="Last Name" />
+                                                                        <TableColumn fx:id="supContactNoCol" minWidth="0.0" prefWidth="240.0" text="Contact Number" />
+                                                                     </columns>
+                                                                  </TableView>
+                                                               </children>
+                                                            </HBox>
+                                                            <VBox layoutX="3.0" layoutY="14.0" prefHeight="34.0" prefWidth="316.0">
+                                                               <children>
+                                                                  <Label prefHeight="40.0" prefWidth="315.0" text="View Suppliers">
+                                                                     <VBox.margin>
+                                                                        <Insets left="35.0" />
+                                                                     </VBox.margin>
+                                                                     <padding>
+                                                                        <Insets left="80.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutY="52.0" prefHeight="582.0" prefWidth="322.0">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" onAction="#LoadSupplierData" prefHeight="25.0" prefWidth="224.0" text="Load All">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="91.0" text="Log out">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" top="496.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                             </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Invoice Infomation">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TabPane fx:id="invoiceInformationTabPane" prefHeight="663.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+                                             <tabs>
+                                                <Tab text="Transaction Logs">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="314.0" layoutY="-1.0" prefHeight="635.0" prefWidth="966.0">
+                                                               <children>
+                                                                  <TableView fx:id="transactionTable" prefHeight="635.0" prefWidth="970.0">
+                                                                     <columns>
+                                                                        <TableColumn fx:id="transInvIdCol" prefWidth="69.0" text="Invoice No" />
+                                                                        <TableColumn fx:id="transCustFNameCol" prefWidth="188.0" text="First Name" />
+                                                                        <TableColumn fx:id="transCustLNameCol" minWidth="0.0" prefWidth="193.0" text="Last Name" />
+                                                                        <TableColumn fx:id="transDateCol" minWidth="0.0" prefWidth="155.0" text="Date" />
+                                                                        <TableColumn fx:id="transTotalCol" minWidth="0.0" prefWidth="93.0" text="Total" />
+                                                                        <TableColumn fx:id="transStaffCol" prefWidth="212.0" text="Staff Name" />
+                                                                        <TableColumn fx:id="transStaffIdCol" prefWidth="55.0" text="Staff ID" />
+                                                                     </columns>
+                                                                  </TableView>
+                                                               </children>
+                                                            </HBox>
+                                                            <VBox layoutX="3.0" layoutY="14.0" prefHeight="34.0" prefWidth="316.0">
+                                                               <children>
+                                                                  <Label prefHeight="40.0" prefWidth="315.0" text="Select customer ">
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                     <padding>
+                                                                        <Insets left="80.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutY="52.0" prefHeight="582.0" prefWidth="322.0">
+                                                               <children>
+                                                                  <TextField fx:id="transCustFNameValue" prefHeight="26.0" prefWidth="193.0" promptText="First Name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="transCustLNameValue" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="193.0" promptText="Last name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="transCustId" layoutX="10.0" layoutY="36.0" prefHeight="26.0" prefWidth="193.0" promptText="Account number">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <Button mnemonicParsing="false" onAction="#LoadTransactionData" prefHeight="25.0" prefWidth="224.0" text="Search">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false" onAction="#LoadAllTransactionData" prefHeight="25.0" prefWidth="224.0" text="Load All">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="91.0" text="Log out">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" top="393.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets right="30.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                            <VBox layoutX="207.0" layoutY="53.0" prefHeight="232.0" prefWidth="110.0">
+                                                               <children>
+                                                                  <Label fx:id="invNameValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="invNameValid2" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                                  <Label fx:id="invAccValid" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                                <Tab fx:id="invoiceInformationTab" text="Invoice Information">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="321.0" prefHeight="26.0" prefWidth="951.0">
+                                                               <children>
+                                                                  <Label prefHeight="30.0" prefWidth="949.0" text="Carringtons Computer Component Parts">
+                                                                     <HBox.margin>
+                                                                        <Insets left="350.0" />
+                                                                     </HBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox layoutX="314.0" layoutY="205.0" prefHeight="356.0" prefWidth="966.0">
+                                                               <children>
+                                                                  <TableView fx:id="invoiceTable" prefHeight="141.0" prefWidth="958.0">
+                                                                     <columns>
+                                                                        <TableColumn fx:id="invProdIdCol" prefWidth="86.0" text="Item Number" />
+                                                                        <TableColumn fx:id="invQuantityCol" prefWidth="159.0" text="Quantity" />
+                                                                        <TableColumn fx:id="invDescripCol" minWidth="0.0" prefWidth="366.0" text="Description" />
+                                                                        <TableColumn fx:id="invPriceCol" minWidth="0.0" prefWidth="123.0" text="Unit Price" />
+                                                                        <TableColumn fx:id="invDiscountCol" minWidth="0.0" prefWidth="114.0" text="Discount" />
+                                                                        <TableColumn fx:id="invTotalCol" prefWidth="114.0" text="Line Total" />
+                                                                     </columns>
+                                                                  </TableView>
+                                                               </children>
+                                                            </HBox>
+                                                            <VBox layoutX="1049.0" layoutY="565.0" prefHeight="69.0" prefWidth="115.0">
+                                                               <children>
+                                                                  <Label prefHeight="24.0" prefWidth="115.0" text="Sub Total" />
+                                                                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="115.0" text="VAT" />
+                                                                  <Label layoutX="10.0" layoutY="35.0" prefHeight="25.0" prefWidth="115.0" text="Total" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="1164.0" layoutY="561.0" prefHeight="74.0" prefWidth="116.0">
+                                                               <children>
+                                                                  <TextField fx:id="invSubTotal" prefHeight="7.0" prefWidth="83.0">
+                                                                     <VBox.margin>
+                                                                        <Insets right="8.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="invVAT" editable="false" layoutX="10.0" layoutY="10.0">
+                                                                     <VBox.margin>
+                                                                        <Insets right="8.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="invFinalTotal" editable="false" layoutX="10.0" layoutY="35.0">
+                                                                     <VBox.margin>
+                                                                        <Insets right="8.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="1055.0" layoutY="28.0" prefHeight="56.0" prefWidth="115.0">
+                                                               <children>
+                                                                  <Label prefHeight="25.0" prefWidth="115.0" text="Invoice Number" />
+                                                                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="115.0" text="Date" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="1170.0" layoutY="31.0" prefHeight="48.0" prefWidth="105.0">
+                                                               <children>
+                                                                  <TextField fx:id="invID" editable="false" layoutX="10.0" layoutY="10.0" />
+                                                                  <TextField fx:id="invDate" editable="false" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="322.0" layoutY="44.0" prefHeight="162.0" prefWidth="245.0">
+                                                               <children>
+                                                                  <Label prefHeight="25.0" prefWidth="193.0" text="12-14 Street Lane Road" />
+                                                                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="115.0" text="Sometown" />
+                                                                  <Label layoutX="10.0" layoutY="35.0" prefHeight="25.0" prefWidth="115.0" text="ST12 3NR" />
+                                                                  <Label layoutX="10.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" text="0123 456 7890" />
+                                                                  <Label layoutX="10.0" layoutY="85.0" prefHeight="25.0" prefWidth="115.0" text="www.cccp.co.uk" />
+                                                                  <Label layoutX="10.0" layoutY="110.0" prefHeight="25.0" prefWidth="115.0" text="orders@cccp.co.uk" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="567.0" layoutY="102.0" prefHeight="103.0" prefWidth="110.0">
+                                                               <children>
+                                                                  <Label prefHeight="25.0" prefWidth="193.0" text="Customer Name:" />
+                                                                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="115.0" text="Address" />
+                                                                  <Label layoutX="10.0" layoutY="35.0" prefHeight="25.0" prefWidth="115.0" text="Post code" />
+                                                                  <Label layoutX="10.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" text="Account Number" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="677.0" layoutY="103.0" prefHeight="103.0" prefWidth="256.0">
+                                                               <children>
+                                                                  <TextField fx:id="invCustName" editable="false" layoutX="10.0" layoutY="10.0" />
+                                                                  <TextField fx:id="invCustAddress" editable="false" />
+                                                                  <TextField fx:id="invCustPostCode" editable="false" layoutX="10.0" layoutY="35.0" />
+                                                                  <TextField fx:id="invCustID" editable="false" layoutX="10.0" layoutY="60.0" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="3.0" layoutY="14.0" prefHeight="34.0" prefWidth="316.0">
+                                                               <children>
+                                                                  <Label prefHeight="40.0" prefWidth="315.0" text="Select customer invoice">
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                     <padding>
+                                                                        <Insets left="80.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutY="52.0" prefHeight="582.0" prefWidth="322.0">
+                                                               <children>
+                                                                  <TextField fx:id="invoiceNo" layoutX="10.0" layoutY="62.0" prefHeight="26.0" prefWidth="193.0" promptText="Invoice Number">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <Button mnemonicParsing="false" onAction="#LoadInvoiceData" prefHeight="25.0" prefWidth="224.0" text="Search">
+                                                                     <VBox.margin>
+                                                                        <Insets left="50.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Button mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="91.0" text="Log out">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" top="470.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets right="30.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                            <VBox layoutX="217.0" layoutY="51.0" prefHeight="97.0" prefWidth="110.0">
+                                                               <children>
+                                                                  <Label fx:id="invAccValid2" prefHeight="26.0" prefWidth="100.0" textFill="#e10606" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                             </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Staff Functions">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Transactions">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TabPane prefHeight="663.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+                                             <tabs>
+                                                <Tab text="New Transaction">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox layoutX="321.0" prefHeight="26.0" prefWidth="951.0">
+                                                               <children>
+                                                                  <Label prefHeight="30.0" prefWidth="949.0" text="Carringtons Computer Component Parts">
+                                                                     <HBox.margin>
+                                                                        <Insets left="350.0" />
+                                                                     </HBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox layoutX="314.0" layoutY="205.0" prefHeight="356.0" prefWidth="966.0">
+                                                               <children>
+                                                                  <TableView fx:id="transactionInvoiceTable" editable="true" prefHeight="141.0" prefWidth="958.0">
+                                                                     <columns>
+                                                                        <TableColumn fx:id="transactionInvProdIdCol" prefWidth="113.0" text="Item Number" />
+                                                                        <TableColumn fx:id="transactionInvQuantityCol" onEditCommit="#NewQuantityValue" prefWidth="132.0" text="Quantity" />
+                                                                        <TableColumn fx:id="transactionInvDescripCol" minWidth="0.0" prefWidth="366.0" text="Description" />
+                                                                        <TableColumn fx:id="transactionInvPriceCol" minWidth="0.0" prefWidth="123.0" text="Unit Price" />
+                                                                        <TableColumn fx:id="transactionInvDiscountCol" minWidth="0.0" prefWidth="114.0" text="Discount" />
+                                                                        <TableColumn fx:id="transactionInvTotalCol" prefWidth="114.0" text="Line Total" />
+                                                                     </columns>
+                                                                  </TableView>
+                                                               </children>
+                                                            </HBox>
+                                                            <VBox layoutX="1049.0" layoutY="565.0" prefHeight="69.0" prefWidth="115.0">
+                                                               <children>
+                                                                  <Label prefHeight="24.0" prefWidth="115.0" text="Sub Total" />
+                                                                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="115.0" text="VAT" />
+                                                                  <Label layoutX="10.0" layoutY="35.0" prefHeight="25.0" prefWidth="115.0" text="Total" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="1164.0" layoutY="561.0" prefHeight="74.0" prefWidth="116.0">
+                                                               <children>
+                                                                  <TextField fx:id="TransactionInvSubTotal" prefHeight="7.0" prefWidth="116.0">
+                                                                     <VBox.margin>
+                                                                        <Insets right="8.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="TransactionInvVAT" layoutX="10.0" layoutY="10.0">
+                                                                     <VBox.margin>
+                                                                        <Insets right="8.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="TransactionInvFinalTotal" layoutX="10.0" layoutY="35.0">
+                                                                     <VBox.margin>
+                                                                        <Insets right="8.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="1055.0" layoutY="28.0" prefHeight="56.0" prefWidth="115.0">
+                                                               <children>
+                                                                  <Label prefHeight="25.0" prefWidth="115.0" text="Invoice Number" />
+                                                                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="115.0" text="Date" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="1170.0" layoutY="31.0" prefHeight="48.0" prefWidth="105.0">
+                                                               <children>
+                                                                  <TextField fx:id="transactionNewNum" editable="false" layoutX="10.0" layoutY="10.0" />
+                                                                  <TextField fx:id="transactionDate" editable="false" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="322.0" layoutY="44.0" prefHeight="162.0" prefWidth="245.0">
+                                                               <children>
+                                                                  <Label prefHeight="25.0" prefWidth="193.0" text="12-14 Street Lane Road" />
+                                                                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="115.0" text="Sometown" />
+                                                                  <Label layoutX="10.0" layoutY="35.0" prefHeight="25.0" prefWidth="115.0" text="ST12 3NR" />
+                                                                  <Label layoutX="10.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" text="0123 456 7890" />
+                                                                  <Label layoutX="10.0" layoutY="85.0" prefHeight="25.0" prefWidth="115.0" text="www.cccp.co.uk" />
+                                                                  <Label layoutX="10.0" layoutY="110.0" prefHeight="25.0" prefWidth="115.0" text="orders@cccp.co.uk" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="567.0" layoutY="102.0" prefHeight="103.0" prefWidth="110.0">
+                                                               <children>
+                                                                  <Label prefHeight="25.0" prefWidth="193.0" text="Customer Names:" />
+                                                                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="115.0" text="Address" />
+                                                                  <Label layoutX="10.0" layoutY="35.0" prefHeight="25.0" prefWidth="115.0" text="Post code" />
+                                                                  <Label layoutX="10.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" text="Account Number" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="677.0" layoutY="103.0" prefHeight="103.0" prefWidth="256.0">
+                                                               <children>
+                                                                  <TextField fx:id="transactionCustName" editable="false" layoutX="10.0" layoutY="10.0">
+                                                                     <VBox.margin>
+                                                                        <Insets right="7.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="transactionCustAddress" editable="false">
+                                                                     <VBox.margin>
+                                                                        <Insets right="7.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="transactionCustPostCode" editable="false" layoutX="10.0" layoutY="35.0">
+                                                                     <VBox.margin>
+                                                                        <Insets right="7.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="transactionCustAccNum" editable="false" layoutX="10.0" layoutY="60.0" prefHeight="25.0" prefWidth="241.0">
+                                                                     <VBox.margin>
+                                                                        <Insets right="7.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="3.0" layoutY="14.0" prefHeight="34.0" prefWidth="316.0">
+                                                               <children>
+                                                                  <Label prefHeight="40.0" prefWidth="315.0" text="Enter Customer Account number">
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                     <padding>
+                                                                        <Insets left="5.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutY="52.0" prefHeight="582.0" prefWidth="314.0">
+                                                               <children>
+                                                                  <TextField fx:id="transactionAccNum" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="217.0" promptText="Account Number">
+                                                                     <VBox.margin>
+                                                                        <Insets left="5.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <Button mnemonicParsing="false" onAction="#NewTransaction" prefHeight="25.0" prefWidth="217.0" text="Search">
+                                                                     <VBox.margin>
+                                                                        <Insets left="5.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <Label prefHeight="40.0" prefWidth="315.0" text="Search for product">
+                                                                     <padding>
+                                                                        <Insets left="5.0" />
+                                                                     </padding>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <TextField maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="217.0" promptText="ID">
+                                                                     <VBox.margin>
+                                                                        <Insets left="5.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField maxWidth="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="217.0" promptText="Category">
+                                                                     <VBox.margin>
+                                                                        <Insets left="5.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <Button mnemonicParsing="false" onAction="#LoadProductData" prefHeight="25.0" prefWidth="217.0" text="Search">
+                                                                     <VBox.margin>
+                                                                        <Insets left="5.0" right="50.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                                  <TableView fx:id="transactionProductTable" prefHeight="369.0" prefWidth="304.0">
+                                                                    <columns>
+                                                                      <TableColumn fx:id="transactionProductIdCol" prefWidth="36.0" text="ID" />
+                                                                      <TableColumn fx:id="transactionProductNameCol" prefWidth="180.0" text="Name" />
+                                                                        <TableColumn fx:id="transactionProductPriceCol" prefWidth="97.0" text="Price" />
+                                                                    </columns>
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="74.0" left="5.0" right="5.0" top="1.0" />
+                                                                     </VBox.margin>
+                                                                  </TableView>
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox layoutX="540.0" layoutY="561.0" prefHeight="32.0" prefWidth="400.0">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" onAction="#ClearTransaction" prefHeight="33.0" prefWidth="200.0" text="Clear" />
+                                                                  <Button mnemonicParsing="false" onAction="#FinalizeTransaction" prefHeight="34.0" prefWidth="209.0" text="Finalize" />
+                                                               </children>
+                                                            </HBox>
+                                                            <VBox layoutX="194.0" layoutY="52.0" prefHeight="51.0" prefWidth="158.0">
+                                                               <children>
+                                                                  <Label fx:id="accNumValid" prefHeight="26.0" prefWidth="96.0" textFill="#dd1919" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                             </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
